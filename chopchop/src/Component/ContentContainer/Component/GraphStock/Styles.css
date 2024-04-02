@@ -1,0 +1,35 @@
+.bar {
+    height: 50px;
+    /* Adjust height based on your bar */
+    width: 20px;
+    /* Adjust width based on your bar */
+    background-color: #ccc;
+    /* Light grey base color */
+    position: relative;
+}
+
+.bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #eee;
+    /* Slightly lighter grey for shimmer */
+    animation: shimmer 1s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: skewX(-15deg);
+    }
+
+    50% {
+        transform: skewX(0deg);
+    }
+
+    100% {
+        transform: skewX(15deg);
+    }
+}

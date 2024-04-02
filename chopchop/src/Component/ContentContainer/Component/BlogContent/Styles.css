@@ -1,0 +1,32 @@
+.shimmerClass {
+    background: #333333;
+    /* Dark grey base color */
+    display: inline-block;
+    background-image: linear-gradient(to right,
+            #333333 20%,
+            /* Start with dark grey */
+            rgba(254, 102, 0, 0.20),
+            /* Light orange with 20% opacity */
+            #333333 60%,
+            /* Back to dark grey */
+            rgba(254, 102, 0, 0.20) 80%
+            /* Light orange with 20% opacity */
+        );
+    background-size: 800px 104px;
+    /* Adjust based on your element size */
+    background-repeat: no-repeat;
+    animation: shimmerAnim 0.6s infinite linear;
+    height: 100px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+@keyframes shimmerAnim {
+    0% {
+        background-position: -468px 0;
+    }
+
+    100% {
+        background-position: 468px 0;
+    }
+}
